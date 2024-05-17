@@ -1,2 +1,2 @@
 # ProblemaPanelsSolares
-Tarea postulacion Bemmbo
+Tarea postulacion Ruufsolar
