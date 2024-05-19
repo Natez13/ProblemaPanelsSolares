@@ -1,13 +1,11 @@
 import math
+# Se asume que los panales pueden ocupar cualquier orientacion dentro del techo
+
 # Funcion de calcula de Area de rectangulos
 def Area_rect(x,y):
     result = x*y
     return result
 
-# Funcion de calcula de Area de rectangulos
-def Area_Triangulo(b,h):
-    result = (b*h)/2
-    return result
 
 # Funcion que Calcula el la cantiada de Paneles que caben en un techo
 # a ancho, b largo medidas en metros de los paneles solares
@@ -33,7 +31,7 @@ def Calculo_Paneles_tri(x,y,b,h):
     elif x > h and y > h:
         return 0 
     else:
-        AreaTecho = Area_Triangulo(b,h)
+        AreaTecho = Area_rect(b/2,h/2)
         AreaPanel = Area_rect(x,y)
         Cant_Paneles = math.floor(AreaTecho/AreaPanel)
         return Cant_Paneles
@@ -46,6 +44,8 @@ print(Calculo_Paneles(1,2,2,4))
 print(Calculo_Paneles(1,2,3,5))
 #- Paneles 2x2 y techo 1x10 ⇒ Caben 0
 print(Calculo_Paneles(2,2,1,10))
+#- Paneles 1x3 y techo 1x10 ⇒ Caben 0
+print(Calculo_Paneles(3,1,1,10))
 
-#- Paneles 3*2 y techo base 9 / altura 5 ⇒ caben 4
+#- Paneles 3x2 y techo base 9 / altura 5 ⇒ caben 3
 print(Calculo_Paneles_tri(3,2,9,5))
