@@ -44,8 +44,9 @@ print(Calculo_Paneles(1,2,2,4))
 print(Calculo_Paneles(1,2,3,5))
 #- Paneles 2x2 y techo 1x10 ⇒ Caben 0
 print(Calculo_Paneles(2,2,1,10))
-#- Paneles 1x3 y techo 1x10 ⇒ Caben 0
+#- Paneles 1x3 y techo 1x10 ⇒ Caben 3
 print(Calculo_Paneles(3,1,1,10))
 
-#- Paneles 3x2 y techo base 9 / altura 5 ⇒ caben 3
+# Triangulos
+#- Paneles 3x2 y techo base 9 / altura 5
 print(Calculo_Paneles_tri(3,2,9,5))
